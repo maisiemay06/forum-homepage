@@ -1,14 +1,17 @@
 <template>
-  <MeetingTiles />
+  <meeting-tiles></meeting-tiles>
+  <creator-tiles></creator-tiles>
 </template>
 
 <script>
 import MeetingTiles from "./components/MeetingTiles.vue";
+import CreatorTiles from "./components/CreatorTiles.vue";
 
 export default {
   name: "App",
   components: {
     MeetingTiles,
+    CreatorTiles,
   },
 };
 </script>
