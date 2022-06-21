@@ -1,26 +1,26 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <MeetingTiles />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import MeetingTiles from "./components/MeetingTiles.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    MeetingTiles,
+  },
+};
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: sofia-pro, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  background-color: #fafafa;
+  width: 100%;
+  height: 100%;
 }
 </style>
