@@ -18,22 +18,130 @@
         rounded-full
         bg-transparent
         hover:bg-white
+        transition
+        ease-in
+        duration-100
       "
       >All</a
     >
-    <a
-      class="
-        text-sm
-        px-5
-        py-3
-        my-2
-        mr-5
-        rounded-full
-        bg-transparent
-        hover:bg-white
-      "
-      >Subject</a
+    <a class="text-sm px-5 py-3 my-2 mr-5 rounded-full bg-transparent group"
+      >Subject <i class="fa-solid fa-chevron-down"></i>
+      <ul
+        class="
+          bg-white
+          hidden
+          group-hover:block
+          absolute
+          z-20
+          left-[125px]
+          transition
+          ease-in
+          duration-1000
+          shadow-md
+          rounded-tl-2xl rounded-br-2xl
+        "
+      >
+        <li
+          class="
+            w-[180px]
+            px-4
+            py-2
+            my-1
+            hover:bg-[#F7F7F7]
+            transition
+            ease-in
+            duration-100
+          "
+        >
+          Category 1
+        </li>
+        <li
+          class="
+            w-[180px]
+            px-4
+            py-2
+            my-1
+            hover:bg-[#F7F7F7]
+            transition
+            ease-in
+            duration-100
+          "
+        >
+          Category 2
+        </li>
+        <li
+          class="
+            w-[180px]
+            px-4
+            py-2
+            my-1
+            hover:bg-[#F7F7F7]
+            transition
+            ease-in
+            duration-100
+          "
+        >
+          Category 3
+        </li>
+        <li
+          class="
+            w-[180px]
+            px-4
+            py-2
+            my-1
+            hover:bg-[#F7F7F7]
+            transition
+            ease-in
+            duration-100
+          "
+        >
+          Category 4
+        </li>
+        <li
+          class="
+            w-[180px]
+            px-4
+            py-2
+            my-1
+            hover:bg-[#F7F7F7]
+            transition
+            ease-in
+            duration-100
+          "
+        >
+          Category 5
+        </li>
+        <li
+          class="
+            w-[180px]
+            px-4
+            py-2
+            my-1
+            hover:bg-[#F7F7F7]
+            transition
+            ease-in
+            duration-100
+          "
+        >
+          Category 6
+        </li>
+        <li
+          class="
+            w-[180px]
+            px-4
+            py-2
+            my-1
+            hover:bg-[#F7F7F7]
+            transition
+            ease-in
+            duration-100
+          "
+        >
+          Category 7
+        </li>
+      </ul></a
     >
+
     <a
       class="
         text-sm
@@ -44,6 +152,9 @@
         rounded-full
         bg-transparent
         hover:bg-white
+        transition
+        ease-in
+        duration-100
       "
       >Today</a
     >
@@ -57,6 +168,25 @@
         rounded-full
         bg-transparent
         hover:bg-white
+        transition
+        ease-in
+        duration-100
+      "
+      >This week</a
+    >
+    <a
+      class="
+        text-sm
+        px-5
+        py-3
+        my-2
+        mr-5
+        rounded-full
+        bg-transparent
+        hover:bg-white
+        transition
+        ease-in
+        duration-100
       "
       >Next week</a
     >

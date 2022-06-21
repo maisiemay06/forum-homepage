@@ -2,7 +2,8 @@
   <div
     class="
       bg-white
-      w-[409px]
+      w-min
+      max-w-[409px]
       h-[413px]
       rounded-tl-2xl rounded-br-2xl
       text-left
@@ -33,6 +34,7 @@
         relative
         text-[#9F9F9F]
         hover:text-meeow-primary
+        group
       "
     >
       <i class="fa-solid fa-heart text-lg"></i>
@@ -47,11 +49,12 @@
           text-white text-center
           rounded-full
           absolute
-          z-20
+          z-30
           top-[105%]
           left-[50%]
           -ml-[59px]
           text-xs
+          group-hover:visible
         "
         >Add to favorites</span
       >
@@ -112,7 +115,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.fav-btn:hover .fav-btn-text {
+/* .fav-btn:hover .fav-btn-text {
   visibility: visible;
-}
+} */
 </style>
