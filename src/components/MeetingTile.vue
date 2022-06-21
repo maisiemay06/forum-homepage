@@ -18,26 +18,6 @@
 
     <div
       class="
-        bg-meeow-primary
-        rounded-full
-        border
-        text-white
-        w-max
-        py-1
-        px-3
-        text-xs
-        -mt-5
-        ml-5
-        z-20
-        relative
-      "
-      v-if="tile.flair"
-    >
-      {{ tile.flair }}
-    </div>
-
-    <div
-      class="
         fav-btn
         bg-white
         rounded-full
@@ -46,7 +26,7 @@
         shadow
         text-center
         py-2
-        -mt-10
+        -mt-8
         -mb-5
         ml-[21.5rem]
         z-20
@@ -68,7 +48,7 @@
           rounded-full
           absolute
           z-20
-          top-[100%]
+          top-[105%]
           left-[50%]
           -ml-[59px]
           text-xs
@@ -76,11 +56,31 @@
         >Add to favorites</span
       >
     </div>
+    <div
+      class="
+        bg-meeow-primary
+        rounded-full
+        border
+        text-white
+        w-max
+        py-1
+        px-3
+        text-xs
+        -mt-8
+        ml-5
+        -mb-3
+        z-20
+        relative
+      "
+      v-if="tile.flair"
+    >
+      {{ tile.flair }}
+    </div>
 
     <div class="p-5 flex flex-col align-between mt-3">
-      <h3 class="font-semibold text-lg mb-[8px] tracking-tight">
+      <h6 class="font-semibold text-lg mb-[8px] tracking-tight">
         {{ tile.title }}
-      </h3>
+      </h6>
       <div class="text-[14px] mb-5">
         <p class="inline">{{ tile.date }}</p>
         <p class="font-semibold inline ml-2">{{ tile.spaces }}</p>
