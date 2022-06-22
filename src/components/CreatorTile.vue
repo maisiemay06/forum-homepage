@@ -1,6 +1,13 @@
 <template>
   <div
-    class="bg-white rounded-tl-2xl rounded-br-2xl w-1/5 max-w-[261px] h-[426px]"
+    class="
+      bg-white
+      rounded-tl-2xl rounded-br-2xl
+      w-[15%]
+      max-w-[261px]
+      h-auto
+      hover:cursor-pointer
+    "
   >
     <img
       :src="require(`../assets/imgs/${creator.profileImg}`)"

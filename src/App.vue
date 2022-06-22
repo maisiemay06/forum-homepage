@@ -26,5 +26,13 @@ export default {
   width: 100%;
   height: 100%;
   padding: 50px;
+  max-width: 100vw;
+}
+
+@media screen and (max-width: 640px) {
+  #app {
+    background-color: #fff;
+    padding: 25px;
+  }
 }
 </style>

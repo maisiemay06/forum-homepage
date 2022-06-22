@@ -1,30 +1,25 @@
 <template>
-  <h1 class="text-6xl tracking-tight font-semibold text-left mb-10">
-    Time for you to find interesting Meeows, <br />
-    created by interesting new people
+  <!-- Section Header -->
+  <h1 class="sm:text-6xl text-4xl tracking-tight font-semibold text-left mb-10">
+    Time for you to find interesting Meeows, created by interesting new people
   </h1>
-  <h4 class="text-2xl text-left mb-10">
+  <h4 class="sm:text-2xl text-lg text-left mb-10">
     Meet in groups of no more than 4, to have real conversations
   </h4>
 
-  <div class="text-left border-b border-black pb-5 mb-14">
-    <a
-      class="
-        text-sm
-        px-5
-        py-3
-        my-2
-        mr-5
-        rounded-full
-        bg-transparent
-        hover:bg-white
-        transition
-        ease-in
-        duration-100
-      "
-      >All</a
-    >
-    <a class="text-sm px-5 py-3 my-2 mr-5 rounded-full bg-transparent group"
+  <!-- Filter Options -->
+  <div
+    class="
+      text-left
+      border-b border-black
+      pb-5
+      mb-14
+      overflow-x-auto
+      whitespace-nowrap
+    "
+  >
+    <a class="filter-options">All</a>
+    <a class="filter-options group"
       >Subject <i class="fa-solid fa-chevron-down"></i>
       <ul
         class="
@@ -41,167 +36,50 @@
           rounded-tl-2xl rounded-br-2xl
         "
       >
-        <li
-          class="
-            w-[180px]
-            px-4
-            py-2
-            my-1
-            hover:bg-[#F7F7F7]
-            transition
-            ease-in
-            duration-100
-          "
-        >
-          Category 1
-        </li>
-        <li
-          class="
-            w-[180px]
-            px-4
-            py-2
-            my-1
-            hover:bg-[#F7F7F7]
-            transition
-            ease-in
-            duration-100
-          "
-        >
-          Category 2
-        </li>
-        <li
-          class="
-            w-[180px]
-            px-4
-            py-2
-            my-1
-            hover:bg-[#F7F7F7]
-            transition
-            ease-in
-            duration-100
-          "
-        >
-          Category 3
-        </li>
-        <li
-          class="
-            w-[180px]
-            px-4
-            py-2
-            my-1
-            hover:bg-[#F7F7F7]
-            transition
-            ease-in
-            duration-100
-          "
-        >
-          Category 4
-        </li>
-        <li
-          class="
-            w-[180px]
-            px-4
-            py-2
-            my-1
-            hover:bg-[#F7F7F7]
-            transition
-            ease-in
-            duration-100
-          "
-        >
-          Category 5
-        </li>
-        <li
-          class="
-            w-[180px]
-            px-4
-            py-2
-            my-1
-            hover:bg-[#F7F7F7]
-            transition
-            ease-in
-            duration-100
-          "
-        >
-          Category 6
-        </li>
-        <li
-          class="
-            w-[180px]
-            px-4
-            py-2
-            my-1
-            hover:bg-[#F7F7F7]
-            transition
-            ease-in
-            duration-100
-          "
-        >
-          Category 7
-        </li>
+        <li class="dropdown-options">Category 1</li>
+        <li class="dropdown-options">Category 2</li>
+        <li class="dropdown-options">Category 3</li>
+        <li class="dropdown-options">Category 4</li>
+        <li class="dropdown-options">Category 5</li>
+        <li class="dropdown-options">Category 6</li>
+        <li class="dropdown-options">Category 7</li>
       </ul></a
     >
 
-    <a
-      class="
-        text-sm
-        px-5
-        py-3
-        my-2
-        mr-5
-        rounded-full
-        bg-transparent
-        hover:bg-white
-        transition
-        ease-in
-        duration-100
-      "
-      >Today</a
-    >
-    <a
-      class="
-        text-sm
-        px-5
-        py-3
-        my-2
-        mr-5
-        rounded-full
-        bg-transparent
-        hover:bg-white
-        transition
-        ease-in
-        duration-100
-      "
-      >This week</a
-    >
-    <a
-      class="
-        text-sm
-        px-5
-        py-3
-        my-2
-        mr-5
-        rounded-full
-        bg-transparent
-        hover:bg-white
-        transition
-        ease-in
-        duration-100
-      "
-      >Next week</a
-    >
+    <a class="filter-options">Today</a>
+    <a class="filter-options">This week</a>
+    <a class="filter-options">Next week</a>
   </div>
 
-  <div class="flex flex-wrap gap-x-8 gap-y-12">
-    <template v-for="tile in tileContent" :key="tile.id">
-      <meeting-tile :tile="tile"></meeting-tile>
+  <!-- Meeting Tiles -->
+  <div class="flex flex-wrap gap-y-12 justify-between">
+    <template v-for="meeting in meetingContent" :key="meeting.id">
+      <meeting-tile :meeting="meeting"></meeting-tile>
     </template>
   </div>
+
+  <!-- Show More Btn -->
+  <button
+    class="
+      bg-meeow-primary
+      rounded-3xl
+      text-white text-sm
+      px-6
+      py-3
+      mt-10
+      hover:bg-meeow-dark
+      transition
+      ease-in
+      duration-100
+    "
+  >
+    Show me more
+  </button>
 </template>
 
 <script>
 import MeetingTile from "./MeetingTile.vue";
-import TileContent from "./TileContent";
+import MeetingContent from "./MeetingContent";
 
 export default {
   name: "MeetingTiles",
@@ -210,11 +88,41 @@ export default {
   },
   data() {
     return {
-      tileContent: TileContent,
+      meetingContent: MeetingContent,
     };
   },
 };
 </script>
 
 <style scoped>
+.filter-options {
+  font-size: 0.875rem;
+  padding: 0.75rem 1.25rem;
+  margin: 0.5rem 1.25rem 0.5rem 0;
+  border-radius: 9999px;
+  background-color: transparent;
+  transition: ease-in 100ms;
+}
+
+.filter-options:hover {
+  background-color: #fff;
+}
+
+.dropdown-options {
+  width: 180px;
+  padding: 1rem 0.5rem;
+  margin: 0.25rem 0;
+  transition: ease-in 100ms;
+}
+
+.dropdown-options:hover {
+  background-color: #f7f7f7;
+}
+
+@media screen and (max-width: 640px) {
+  .filter-options {
+    font-size: 1.125rem;
+    background-color: #fafafa;
+  }
+}
 </style>

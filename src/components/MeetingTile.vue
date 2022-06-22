@@ -1,38 +1,49 @@
 <template>
   <div
     class="
+      basis-full
+      sm:basis-[47%]
+      lg:basis-[30%]
       bg-white
-      w-min
       max-w-[409px]
       h-[413px]
       rounded-tl-2xl rounded-br-2xl
       text-left
       z-0
       hover:cursor-pointer
+      mb-12
+      sm:mb-5
     "
   >
     <img
-      :src="require(`../assets/imgs/${tile.meetingImg}`)"
-      :alt="tile.title"
-      class="w-full h-[229px] rounded-tl-2xl rounded-br-2xl z-10"
+      :src="require(`../assets/imgs/${meeting.meetingImg}`)"
+      :alt="meeting.title"
+      class="
+        w-full
+        h-auto
+        rounded-tl-2xl rounded-br-2xl
+        z-10
+        object-cover object-center
+      "
     />
 
+    <!-- Favorite Btn -->
     <div
       class="
-        fav-btn
         bg-white
         rounded-full
-        w-[45px]
-        h-[45px]
+        w-[50px]
+        h-[50px]
+        sm:w-[45px] sm:h-[45px]
         shadow
         text-center
         py-2
         -mt-8
-        -mb-5
-        ml-[21.5rem]
+        ml-[85%]
         z-20
         relative
-        text-[#9F9F9F]
+        text-black
+        sm:text-[#9F9F9F]
         hover:text-meeow-primary
         group
       "
@@ -59,6 +70,8 @@
         >Add to favorites</span
       >
     </div>
+
+    <!-- Meeting Flair -->
     <div
       class="
         bg-meeow-primary
@@ -68,37 +81,44 @@
         w-max
         py-1
         px-3
-        text-xs
-        -mt-8
-        ml-5
-        -mb-3
+        text-sm
+        sm:text-xs sm:-mt-8 sm:-mb-3 sm:ml-5
         z-20
         relative
       "
-      v-if="tile.flair"
+      v-if="meeting.flair"
     >
-      {{ tile.flair }}
+      {{ meeting.flair }}
     </div>
 
-    <div class="p-5 flex flex-col align-between mt-3">
-      <h6 class="font-semibold text-lg mb-[8px] tracking-tight">
-        {{ tile.title }}
+    <!-- Main Text -->
+    <div class="sm:p-5 flex flex-col mt-2 sm:mt-0">
+      <h6 class="font-semibold text-[22px] sm:text-lg mb-[8px] tracking-tight">
+        {{ meeting.title }}
       </h6>
-      <div class="text-[14px] mb-5">
-        <p class="inline">{{ tile.date }}</p>
-        <p class="font-semibold inline ml-2">{{ tile.spaces }}</p>
+      <div class="text-base sm:text-sm mb-5">
+        <p class="sm:inline">{{ meeting.date }}</p>
+        <p class="font-semibold sm:inline sm:ml-2">{{ meeting.spaces }}</p>
       </div>
-      <div class="flex flex-wrap mt-auto mb-[26px]">
+
+      <!-- Meeting Host -->
+      <div class="flex flex-wrap mt-auto mb-[26px] justify-self-end">
         <img
-          :src="require(`../assets/imgs/${tile.hostImg}`)"
-          :alt="host"
-          class="h-[40px] w-[40px] rounded-br-xl rounded-tl-xl mr-2"
+          :src="require(`../assets/imgs/${meeting.hostImg}`)"
+          :alt="meeting.meetingHost"
+          class="
+            h-[58px]
+            w-[58px]
+            sm:h-[40px] sm:w-[40px]
+            rounded-br-lg rounded-tl-lg
+            mr-2
+          "
         />
-        <div class="text-xs">
-          <p>{{ tile.host }}</p>
+        <div class="text-base sm:text-xs">
+          <p>{{ meeting.meetingHost }}</p>
           <p>
             <i class="fa-solid fa-star text-meeow-secondary"></i>
-            {{ tile.hostType }}
+            {{ meeting.hostType }}
           </p>
         </div>
       </div>
@@ -109,13 +129,9 @@
 <script>
 export default {
   name: "MeetingTile",
-  props: ["tile"],
+  props: ["meeting"],
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-/* .fav-btn:hover .fav-btn-text {
-  visibility: visible;
-} */
 </style>
