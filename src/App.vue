@@ -1,17 +1,28 @@
 <template>
-  <meeting-tiles></meeting-tiles>
-  <creator-tiles></creator-tiles>
+  <advert-full></advert-full>
+  <div class="p-6 sm:p-12">
+    <meeting-tiles></meeting-tiles>
+    <creator-tiles></creator-tiles>
+  </div>
+  <div class="flex sm:p-12 gap-8">
+    <advert-small adImg="ad-img-2.png"></advert-small>
+    <advert-small adImg="ad-img-3.png"></advert-small>
+  </div>
 </template>
 
 <script>
 import MeetingTiles from "./components/MeetingTiles.vue";
 import CreatorTiles from "./components/CreatorTiles.vue";
+import AdvertFull from "./components/AdvertFull.vue";
+import AdvertSmall from "./components/AdvertSmall.vue";
 
 export default {
   name: "App",
   components: {
     MeetingTiles,
     CreatorTiles,
+    AdvertFull,
+    AdvertSmall,
   },
 };
 </script>
@@ -25,14 +36,13 @@ export default {
   background-color: #fafafa;
   width: 100%;
   height: 100%;
-  padding: 50px;
+
   max-width: 100vw;
 }
 
 @media screen and (max-width: 640px) {
   #app {
     background-color: #fff;
-    padding: 25px;
   }
 }
 </style>
