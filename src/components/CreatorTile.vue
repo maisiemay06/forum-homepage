@@ -50,3 +50,6 @@ export default {
   props: ["creator"],
 };
 </script>
+
+<style scoped>
+</style>

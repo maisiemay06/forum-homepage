@@ -21,6 +21,8 @@
     <a class="filter-options">All</a>
     <a class="filter-options group"
       >Subject <i class="fa-solid fa-chevron-down"></i>
+
+      <!-- Subject Dropdown Options -->
       <ul
         class="
           bg-white
@@ -52,10 +54,16 @@
   </div>
 
   <!-- Meeting Tiles -->
+
   <div class="flex flex-wrap gap-y-12 justify-between">
-    <template v-for="meeting in meetingContent" :key="meeting.id">
-      <meeting-tile :meeting="meeting"></meeting-tile>
-    </template>
+    <transition-group name="fade">
+      <template v-for="(meeting, index) in meetingContent" :key="meeting.id">
+        <meeting-tile
+          :meeting="meeting"
+          v-if="index < this.meetingLimit"
+        ></meeting-tile>
+      </template>
+    </transition-group>
   </div>
 
   <!-- Show More Btn -->
@@ -72,6 +80,8 @@
       ease-in
       duration-100
     "
+    @click="() => (this.meetingLimit += 4)"
+    v-if="this.meetingLimit < this.meetingContent.length"
   >
     Show me more
   </button>
@@ -89,12 +99,22 @@ export default {
   data() {
     return {
       meetingContent: MeetingContent,
+      meetingLimit: 4,
     };
   },
 };
 </script>
 
 <style scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease-in-out;
+}
+.fade-enter-from,
+.fade-enter-to {
+  opacity: 0;
+}
+
 .filter-options {
   font-size: 0.875rem;
   padding: 0.75rem 1.25rem;
