@@ -4,7 +4,7 @@
     <meeting-tiles></meeting-tiles>
     <creator-tiles></creator-tiles>
   </div>
-  <div class="flex sm:p-12 gap-8">
+  <div class="flex sm:p-12 gap-8 advert-small">
     <advert-small adImg="ad-img-2.png"></advert-small>
     <advert-small adImg="ad-img-3.png"></advert-small>
   </div>
@@ -33,16 +33,19 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  background-color: #fafafa;
+  background-color: #fff;
   width: 100%;
   height: 100%;
 
   max-width: 100vw;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (min-width: 640px) {
   #app {
-    background-color: #fff;
+    background-color: #fafafa;
+  }
+  .advert-small {
+    flex-direction: row;
   }
 }
 </style>
