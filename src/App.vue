@@ -1,4 +1,9 @@
 <template>
+  <!-- Section Title -->
+  <title-divider
+    title="Meeow. The real conversation platform."
+    subtitle="Revolutionary AI matching to find and meet online with the people who're talking about subjects you love."
+  ></title-divider>
   <!-- Large Ad -->
   <advert-full></advert-full>
 
@@ -9,25 +14,10 @@
   </div>
 
   <!-- Section Title -->
-  <div class="p-6 sm:p-12 hidden sm:block">
-    <h1
-      class="sm:text-6xl text-4xl tracking-tight font-semibold text-left mb-10"
-    >
-      New business, collaboration, support, ideas, opinion, insight, learning,
-      promotion, understanding, opportunies...
-    </h1>
-    <h4 class="sm:text-2xl text-lg text-left mb-10">
-      Find them all, on Meeow.
-    </h4>
-    <button
-      class="bg-meeow-primary rounded-full px-8 py-3 text-sm text-white mr-5"
-    >
-      Join Meeow
-    </button>
-    <button class="border border-black rounded-full px-8 text-sm py-3">
-      Create your own Meeow
-    </button>
-  </div>
+  <title-divider
+    title="New business, collaboration, support, ideas, opinions, insight, learning, promotion, understanding, opportunities..."
+    subtitle="Find them all, on Meeow."
+  ></title-divider>
 
   <!-- Small Ads -->
   <div class="flex sm:p-12 gap-8 advert-small">
@@ -41,6 +31,7 @@ import MeetingTiles from "./components/MeetingTiles.vue";
 import CreatorTiles from "./components/CreatorTiles.vue";
 import AdvertFull from "./components/AdvertFull.vue";
 import AdvertSmall from "./components/AdvertSmall.vue";
+import TitleDivider from "./components/TitleDivider.vue";
 
 export default {
   name: "App",
@@ -49,6 +40,7 @@ export default {
     CreatorTiles,
     AdvertFull,
     AdvertSmall,
+    TitleDivider,
   },
 };
 </script>
@@ -59,6 +51,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #fff;
+  text-align: center;
   width: 100%;
   height: 100%;
   max-width: 100vw;
