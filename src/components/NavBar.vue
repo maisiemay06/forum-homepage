@@ -1,6 +1,6 @@
 <template>
   <!-- Main Nav -->
-  <nav>
+  <nav class="z-100 fixed navbar">
     <div
       class="
         w-full
@@ -265,7 +265,7 @@
         <p class="hidden lg:inline-block font-semibold text-[15px] mr-5">
           on-demand networking in
         </p>
-        <p class="text-3xl font-semibold lg:mr-5">13:52</p>
+        <p class="text-3xl sm:text-[50px] font-semibold lg:mr-5">13:52</p>
         <button
           class="
             text-[15px]
@@ -313,9 +313,10 @@ export default {
       showModal: false,
       modalContent: "",
       modalBtnContent: "",
+      showNavbar: true,
+      lastScrollPos: 0,
     };
   },
-
   methods: {
     toggleNavMenu() {
       console.log("show");
