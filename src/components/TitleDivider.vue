@@ -1,5 +1,5 @@
 <template>
-  <div class="p-6 sm:p-12 hidden sm:block text-left">
+  <div class="p-6 pr-0 sm:p-12 text-left">
     <h1
       class="sm:text-6xl text-4xl tracking-tight font-semibold text-left mb-10"
     >
@@ -9,12 +9,20 @@
       {{ subtitle }}
     </h4>
     <button
-      class="bg-meeow-primary rounded-full px-8 py-3 text-sm text-white mr-5"
+      class="
+        bg-meeow-primary
+        rounded-full
+        px-8
+        py-3
+        text-sm text-white
+        mr-2
+        sm:mr-5
+      "
     >
       Join Meeow
     </button>
     <button class="border border-black rounded-full px-8 text-sm py-3">
-      Create your own Meeow
+      Create a Meeow
     </button>
   </div>
 </template>

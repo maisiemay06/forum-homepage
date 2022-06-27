@@ -17,6 +17,7 @@
   <title-divider
     title="New business, collaboration, support, ideas, opinions, insight, learning, promotion, understanding, opportunities..."
     subtitle="Find them all, on Meeow."
+    class="hidden sm:block"
   ></title-divider>
 
   <!-- Small Ads -->
@@ -24,6 +25,15 @@
     <advert-small adImg="ad-img-2.png"></advert-small>
     <advert-small adImg="ad-img-3.png"></advert-small>
   </div>
+
+  <!-- Section Title -->
+  <title-divider
+    title="It's time to start your own conversation"
+    subtitle="By the way... Meeow is free for everyone ;)"
+  ></title-divider>
+
+  <!-- Footer Newsletter Signup -->
+  <footer-newsletter></footer-newsletter>
 </template>
 
 <script>
@@ -32,6 +42,7 @@ import CreatorTiles from "./components/CreatorTiles.vue";
 import AdvertFull from "./components/AdvertFull.vue";
 import AdvertSmall from "./components/AdvertSmall.vue";
 import TitleDivider from "./components/TitleDivider.vue";
+import FooterNewsletter from "./components/FooterNewsletter.vue";
 
 export default {
   name: "App",
@@ -41,6 +52,7 @@ export default {
     AdvertFull,
     AdvertSmall,
     TitleDivider,
+    FooterNewsletter,
   },
 };
 </script>
@@ -55,6 +67,7 @@ export default {
   width: 100%;
   height: 100%;
   max-width: 100vw;
+  overflow-x: hidden;
 }
 
 .advert-small {
