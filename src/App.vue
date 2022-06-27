@@ -1,17 +1,9 @@
 <template>
   <!-- Nav Bar -->
   <nav-bar></nav-bar>
-  <!-- Section Title -->
-  <title-divider
-    title="Meeow. The real conversation platform."
-    subtitle="Revolutionary AI matching to find and meet online with the people who're talking about subjects you love."
-    class="hidden sm:block mt-[210px]"
-  ></title-divider>
-  <title-divider
-    title="Meeow. The real conversation"
-    subtitle="Revolutionary AI matching to find and meet online with the people who're talking about subjects you love."
-    class="sm:hidden mt-[210px]"
-  ></title-divider>
+  <!-- Main Title -->
+  <main-title></main-title>
+
   <!-- Large Ad -->
   <advert-full></advert-full>
 
@@ -55,6 +47,7 @@ import AdvertSmall from "./components/AdvertSmall.vue";
 import TitleDivider from "./components/TitleDivider.vue";
 import FooterNewsletter from "./components/FooterNewsletter.vue";
 import NavBar from "./components/NavBar.vue";
+import MainTitle from "./components/MainTitle.vue";
 
 export default {
   name: "App",
@@ -66,6 +59,7 @@ export default {
     TitleDivider,
     FooterNewsletter,
     NavBar,
+    MainTitle,
   },
 };
 </script>

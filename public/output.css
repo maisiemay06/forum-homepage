@@ -695,6 +695,11 @@ video {
   z-index: 30;
 }
 
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .mb-1 {
   margin-bottom: 0.25rem;
 }
@@ -919,6 +924,10 @@ video {
   height: 100vh;
 }
 
+.h-\[540px\] {
+  height: 540px;
+}
+
 .max-h-\[413px\] {
   max-height: 413px;
 }
@@ -1091,6 +1100,18 @@ video {
 
 .rounded-3xl {
   border-radius: 1.5rem;
+}
+
+.rounded-sm {
+  border-radius: 0.125rem;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.rounded-xl {
+  border-radius: 0.75rem;
 }
 
 .rounded-b-lg {
