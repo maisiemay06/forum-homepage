@@ -21,7 +21,7 @@
   ></title-divider>
 
   <!-- Small Ads -->
-  <div class="flex sm:p-12 gap-8 advert-small">
+  <div class="flex mt-5 sm:mt-0 sm:p-12 sm:gap-8 advert-small">
     <advert-small adImg="ad-img-2.png"></advert-small>
     <advert-small adImg="ad-img-3.png"></advert-small>
   </div>
@@ -34,6 +34,9 @@
 
   <!-- Footer Newsletter Signup -->
   <footer-newsletter></footer-newsletter>
+
+  <!-- Black space -->
+  <div class="bg-black w-full h-[200px]"></div>
 </template>
 
 <script>

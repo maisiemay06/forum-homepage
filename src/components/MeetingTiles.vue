@@ -12,10 +12,12 @@
     class="
       text-left
       border-b border-black
+      pt-3
       pb-5
       mb-14
       overflow-x-auto
       whitespace-nowrap
+      h-auto
     "
   >
     <a class="filter-options">All</a>

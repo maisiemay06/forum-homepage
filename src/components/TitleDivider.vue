@@ -1,5 +1,5 @@
 <template>
-  <div class="p-6 pr-0 sm:p-12 text-left">
+  <div class="pl-6 py-12 pr-5 sm:p-12 text-left">
     <h1
       class="sm:text-6xl text-4xl tracking-tight font-semibold text-left mb-10"
     >
@@ -21,7 +21,22 @@
     >
       Join Meeow
     </button>
-    <button class="border border-black rounded-full px-8 text-sm py-3">
+    <button
+      class="
+        hidden
+        sm:inline-block
+        border border-black
+        rounded-full
+        px-8
+        text-sm
+        py-3
+      "
+    >
+      Create your own Meeow
+    </button>
+    <button
+      class="sm:hidden border border-black rounded-full px-8 text-sm py-3"
+    >
       Create a Meeow
     </button>
   </div>

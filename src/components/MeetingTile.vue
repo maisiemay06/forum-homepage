@@ -46,7 +46,7 @@
         z-20
         relative
         text-black
-        sm:text-[#9F9F9F]
+        lg:text-[#9F9F9F]
         hover:text-meeow-primary
         group
       "
@@ -68,13 +68,13 @@
           left-[50%]
           -ml-[59px]
           text-xs
-          group-hover:visible
+          lg:group-hover:visible
         "
         >Add to favorites</span
       >
     </div>
 
-    <!-- Meeting Flair -->
+    <!-- Meeting Flair & Placeholder -->
     <div
       class="
         bg-black
@@ -94,23 +94,33 @@
     >
       {{ meeting.flair }}
     </div>
-    <div class="h-7 sm:-mt-4 sm:-mb-3" v-else></div>
+    <div class="h-7 sm:-mt-4 sm:-mb-8" v-else></div>
 
     <!-- Main Text -->
     <h6
-      class="font-semibold text-[22px] sm:text-lg tracking-tight mt-5 padding"
+      class="
+        font-semibold
+        text-[22px]
+        sm:text-lg
+        tracking-tight
+        leading-7
+        sm:leading-6
+        mt-5
+        padding
+        mb-2
+      "
     >
       {{ meeting.title }}
     </h6>
 
     <!-- Date, Time, Spaces -->
     <div class="text-base sm:text-sm padding">
-      <p class="sm:inline">{{ meeting.date }}</p>
-      <p class="font-semibold sm:inline sm:ml-2">{{ meeting.spaces }}</p>
+      <p class="xl:inline">{{ meeting.date }}</p>
+      <p class="font-semibold xl:inline xl:ml-2">{{ meeting.spaces }}</p>
     </div>
 
     <!-- Meeting Host Info -->
-    <div class="flex flex-wrap mt-auto padding">
+    <div class="flex flex-wrap mt-6 sm:mt-auto padding">
       <img
         :src="require(`../assets/imgs/${meeting.hostImg}`)"
         alt="meeting.meetingHost"
