@@ -54,7 +54,6 @@
       <i class="fa-solid fa-heart text-lg"></i>
       <span
         class="
-          fav-btn-text
           invisible
           w-[118px]
           h-[23px]

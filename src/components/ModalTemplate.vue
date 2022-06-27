@@ -13,7 +13,14 @@
     @click="closeModal"
   >
     <div
-      class="bg-white rounded-tl-2xl rounded-br-2xl text-left text-sm w-4/5 p-6"
+      class="
+        bg-white
+        rounded-tl-2xl rounded-br-2xl
+        text-left text-sm
+        w-4/5
+        p-6
+        lg:w-[296px]
+      "
     >
       <p>{{ modalContent }}</p>
       <button

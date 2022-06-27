@@ -1,5 +1,5 @@
 <template>
-  <div class="pl-6 py-12 pr-5 sm:p-12 mt-[210px] text-center">
+  <div class="pl-6 py-12 pr-5 sm:p-12 mt-[210px] lg:mt-[250px] text-center">
     <h1 class="sm:text-6xl text-4xl tracking-tight font-semibold mb-10">
       Meeow. The real conversation platform.
     </h1>
