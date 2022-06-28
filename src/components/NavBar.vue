@@ -255,7 +255,7 @@
           py-2
           px-6
           top-[155px]
-          lg:h-[80px] lg:top-[170px] lg:justify-center lg:w-[90%]
+          lg:h-[80px] lg:top-[170px] lg:justify-center
           border-box
         "
       >
@@ -316,7 +316,6 @@ export default {
   },
   methods: {
     toggleNavMenu() {
-      console.log("show");
       this.showNavMenu = !this.showNavMenu;
     },
     openModal(props) {
