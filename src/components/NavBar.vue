@@ -1,6 +1,6 @@
 <template>
   <!-- Main Nav -->
-  <nav class="z-100 fixed navbar">
+  <nav class="z-100 navbar">
     <div
       class="
         w-full
@@ -13,7 +13,6 @@
         lg:px-20 lg:pt-5 lg:pb-5
         border-b
         bg-white
-        fixed
         h-[100px]
         lg:h-[90px]
       "
@@ -188,7 +187,6 @@
         justify-start
         items-center
         bg-white
-        fixed
         top-[100px]
         lg:top-[90px]
         h-[55px]
@@ -256,7 +254,6 @@
           rounded-b-lg
           py-2
           px-6
-          fixed
           top-[155px]
           lg:h-[80px] lg:top-[170px] lg:justify-center lg:w-[90%]
           border-box
