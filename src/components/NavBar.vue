@@ -241,7 +241,7 @@
     </div>
 
     <!-- Countdown Bar -->
-    <!-- Can't get the padding on the right hand side of the page so had to set width to 90% but doesn't work for all screen sizes.  -->
+
     <div class="w-full lg:px-20 border-box">
       <div
         class="
